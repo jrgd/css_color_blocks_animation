@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <style type="text/css">
+    body div.color_block {
+
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      display: table;
+      margin: 0 20px 20px 0;
+    }
+
+    body div.color_block.red {
+      background-color: red;
+      color: yellow;
+    }
+
+    body div.color_block.blue {
+      background-color: blue;
+      color: lightgreen;
+    }
+
+    body div.color_block.bw {
+      background-color: black;
+      color: white;
+    }
+
+    body div.color_block div.text_content {
+      font-family: Helvetica;
+      font-size: 1.5rem;
+      position: relative;
+      z-index: 999;
+      display: table-cell;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    body div.color_block.triangle:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 7px;
+      left: 0px;
+      width: 0px;
+      height: 0px;
+      border-top: 80px solid transparent;
+      border-bottom: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-left: 80px solid white;
+      transform: rotate(-45deg);
+      transition: 0.8s;
+    }
+
+    body div.color_block.square:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: -200px;
+      width: 300px;
+      height: 300px;
+      transform: rotate(37deg);
+      transition: 0.8s;
+    }
+
+    body div.color_block.circle:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 300px;
+      height: 300px;
+      border-radius: 150px;
+      /*transform: rotate(37deg);*/
+      transition: 0.8s;
+    }
+
+    body div.color_block.red:before {
+      background-image: linear-gradient(75deg, rgba(255,255,0,0) , yellow);
+    }
+
+    body div.color_block.blue:before {
+      background-image: linear-gradient(20deg, rgba(255,0,255,0) , lightgreen);
+    }
+
+    body div.color_block.square:hover:before {
+      top: 0;
+      transform: rotate(-23deg);
+    }
+    body div.color_block.circle:hover:before {
+      top: 140px;
+      transform: rotate(-180deg);
+    }
+    body div.color_block.triangle:hover:before {
+      top: 0;
+      transform: rotate(90deg);
+      border-left: 200px solid rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class='color_block red square'>
+    <div class='text_content'>
+      A Simple CSS Toolbox
+    </div>
+  </div>
+
+  <div class='color_block blue circle'>
+    <div class='text_content'>
+      For Moving<br> Blocks of Colour
+    </div>
+  </div>
+
+  <div class='color_block bw triangle'>
+    <div class='text_content'>
+      Fearturing: CSS Triangle!
+    </div>
+  </div>
+
+</body>
+</html>

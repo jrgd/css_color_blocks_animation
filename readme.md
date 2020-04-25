@@ -1,0 +1,1 @@
+A simple experiment in usign css, color blocks, transparency and gradients, hover, basic geometry and HTML+CSS.
